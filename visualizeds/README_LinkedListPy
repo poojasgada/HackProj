@@ -1,0 +1,6 @@
+README
+======
+
+To test the modules in LinkedListPy, just run 
+
+$ python testLinkedListPy.py
