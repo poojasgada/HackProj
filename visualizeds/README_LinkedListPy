@@ -1,6 +1,10 @@
 README
 ======
 
+Note:
+- Python version i use: 2.7.5
+- No modules needed to run the code
+ 
 To test the modules in LinkedListPy, just run 
 
 $ python testLinkedListPy.py
