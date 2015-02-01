@@ -67,6 +67,24 @@ class LinkedListPyTests(unittest.TestCase):
 		# Always nice to cleanup after test
 		testList = None
 
+	def test_listIndexOf(self):
+		testList = LinkedList()
 
+		self.assertEqual(-1, testList.listIndexOf(3))
+
+		testList.listAddEnd(4)
+		self.assertEqual(0, testList.listIndexOf(4))
+
+		testList.listAddEnd(5)
+		testList.listAddEnd(6)
+		testList.listAddEnd(6)
+
+		self.assertEqual(1, testList.listIndexOf(5))
+		self.assertEqual(2, testList.listIndexOf(6))
+		self.assertEqual(-1, testList.listIndexOf(7))
+
+		# Always nice to cleanup after test
+		testList = None
+		
 if __name__ == '__main__':
     unittest.main()

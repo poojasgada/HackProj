@@ -8,6 +8,7 @@ LinkedList functions supported
 - Add a node to start of list
 - Is the list empty
 - Searching in a list
+- Index of given value in the list(List index from 0)
 
 '''
 
@@ -95,4 +96,21 @@ class LinkedList:
 			curNode = curNode.next
 
 		return False
+
+	# Get index of a value in list, -1 if value not found, in case of many matches, return first
+	def listIndexOf(self, searchVal):
+		if not self.listHead:
+			return -1
+
+		curNode = self.listHead
+		idx = 0
+
+		while curNode:
+			if curNode.val == searchVal:
+				return idx
+
+			curNode = curNode.next
+			idx += 1
+
+		return -1
 
