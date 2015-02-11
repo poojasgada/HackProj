@@ -1,0 +1,11 @@
+README
+======
+
+Note:
+- Python version i use: 2.7.5
+- No modules needed to run the code
+- It just works! 
+ 
+To test the modules in BinarySearchTreePy, just run 
+
+$ python testBinarySearchTreePy.py
