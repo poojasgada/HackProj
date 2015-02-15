@@ -75,6 +75,22 @@ class BinarySearchTreePyTests(unittest.TestCase):
 		postorder_string  = sys.stdout.getvalue()
 		sys.stdout = sys.__stdout__
 		self.assertEqual("3 6 5", postorder_string)
+
+	def test_minValBST(self):
+		testBST = BST()
+		testBST.root = Node(5)
+		testBST.root.left = Node(3)
+		testBST.root.right = Node(6)
+
+		self.assertEqual(3, testBST.minValBST(testBST.root))
+
+	def test_maxValBST(self):
+		testBST = BST()
+		testBST.root = Node(5)
+		testBST.root.left = Node(3)
+		testBST.root.right = Node(6)
+
+		self.assertEqual(6, testBST.maxValBST(testBST.root))
 		
 
 if __name__ == '__main__':

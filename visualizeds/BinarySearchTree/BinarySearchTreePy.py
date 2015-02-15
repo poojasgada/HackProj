@@ -9,6 +9,8 @@ Binary Search Tree functions supported
 - Delete
 - IsBST
 - Size
+- Minimum value
+- Maximum value
 
 '''
 
@@ -64,3 +66,23 @@ class BST:
 			return 0
 		else:
 			return 1 + self.sizeBST(curNode.left) + self.sizeBST(curNode.right)
+
+	# Get the minimum value of BST
+	def minValBST(self, curNode):
+		if not curNode:
+			return curNode
+
+		if curNode.left:
+			return self.minValBST(curNode.left)
+		else:
+			return curNode.val
+
+	# Get the maximum value of BST
+	def maxValBST(self, curNode):
+		if not curNode:
+			return curNode
+
+		if curNode.right:
+			return self.maxValBST(curNode.right)
+		else:
+			return curNode.val
